@@ -33,14 +33,14 @@ button {
   border: none;
   outline: none;
 }
-.game {
+#game {
   padding-top: 20px;
   display: none;
 }
-.lower {
+#lower {
   margin: 0 10px;
 }
-.guess {
+#guess {
   font-size: 50px;
   margin: 20px 0;
 }

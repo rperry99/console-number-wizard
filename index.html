@@ -9,16 +9,18 @@
   </head>
   <body>
     <div class="container">
-      <h1>Choose a number between 1 and 1000 and I will guess it.</h1>
-      <button id="begin">Begin</button>
-      <div class="game">
+      <h1 id="title">
+        Choose a number between 1 and 1000 and I will guess it.
+      </h1>
+      <button id="begin" onClick="startGame()">Begin</button>
+      <div id="game">
         <p>The number you have chosen is...</p>
-        <p class="guess">50</p>
+        <p id="guess">50</p>
         <hr />
         <p>My number is...</p>
-        <button class="higher">Higher</button>
-        <button class="lower">Lower</button>
-        <button class="correct">That's it!</button>
+        <button id="higher" onClick="higher()">Higher</button>
+        <button id="lower" onClick="lower()">Lower</button>
+        <button id="correct" onClick="correct()">That's it!</button>
       </div>
     </div>
 
