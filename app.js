@@ -10,7 +10,7 @@ let titleText = document.getElementById("title");
 //Variables
 let max = 1000;
 let min = 1;
-let guess = calculate(min, max);
+let guess = Math.floor(Math.random() * max) + min;
 
 //Functions
 function higher() {
