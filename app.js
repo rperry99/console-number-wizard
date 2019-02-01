@@ -11,23 +11,26 @@ let titleText = document.getElementById("title");
 let max = 1000;
 let min = 1;
 let guess = Math.floor(Math.random() * max) + min;
+let guessCount = 0;
 
 //Functions
 function higher() {
   min = guess;
   guess = calculate(min, max);
+  guessCount++;
   guessNumber.innerHTML = guess;
 }
 function lower() {
   max = guess;
   guess = calculate(min, max);
+  guessCount++;
   guessNumber.innerHTML = guess;
 }
 function correct() {
   begin.style.display = "inline";
   game.style.display = "none";
   begin.innerHTML = "Play Again";
-  titleText.innerHTML = "Looks like I am a genius... Play again?";
+  titleText.innerHTML = `I'm a genius! It only took me ${guessCount} tries! Play again?`;
   min = 1;
   max = 1000;
   guess = calculate(min, max);
@@ -38,6 +41,7 @@ function startGame() {
   guessNumber.innerHTML = guess;
   titleText.innerHTML = "Okay, Let's Play...";
   max += 1;
+  guessCount = 0;
 }
 function calculate(min, max) {
   return Math.floor((min + max) / 2);
