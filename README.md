@@ -2,6 +2,10 @@
 
 - You pick a number between x and y, and the game will guess a number, you say if it's lower or higher, and eventually, the computer will get it right.
 
+### Future update ideas
+
+- Let the user create the range themselves
+
 # Version 1
 
 - Choose a random number between 1 and 1000 and the game will eventually guess it
