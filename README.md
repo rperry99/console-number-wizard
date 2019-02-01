@@ -11,3 +11,9 @@
 ### Version 1.1
 
 - Fixed a bug where the game won't go up to 1000
+
+# Version 2
+
+- Refactored JS to use less repeating lines
+- Add feature that counts how many times it had to guess until it gets the right number.
+  - Winning phrase is different depending on how many guesses
