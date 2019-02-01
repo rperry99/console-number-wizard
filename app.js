@@ -27,7 +27,7 @@ function correct() {
   begin.style.display = "inline";
   game.style.display = "none";
   begin.innerHTML = "Play Again";
-  titleText.innerHTML = "Look's like I am a genius... Play again?";
+  titleText.innerHTML = "Looks like I am a genius... Play again?";
   min = 1;
   max = 1000;
   guess = calculate(min, max);
@@ -37,6 +37,7 @@ function startGame() {
   game.style.display = "block";
   guessNumber.innerHTML = guess;
   titleText.innerHTML = "Okay, Let's Play...";
+  max += 1;
 }
 function calculate(min, max) {
   return Math.floor((min + max) / 2);
