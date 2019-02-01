@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  border: solid 4px red;
+  border-radius: 15px;
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+hr {
+  margin-bottom: 20px;
+}
+button {
+  margin-top: 20px;
+  width: 150px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+.game {
+  padding-top: 20px;
+  display: none;
+}
+.lower {
+  margin: 0 10px;
+}
+.guess {
+  font-size: 50px;
+  margin: 20px 0;
+}
