@@ -21,3 +21,7 @@
 - Refactored JS to use less repeating lines
 - Add feature that counts how many times it had to guess until it gets the right number.
   - Winning phrase is different depending on how many guesses
+  
+# Version 3
+
+- Let's the user choose the range that their number falls in.
