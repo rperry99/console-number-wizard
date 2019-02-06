@@ -44,3 +44,12 @@ button {
   font-size: 50px;
   margin: 20px 0;
 }
+#min,
+#max {
+  height: 50px;
+  width: 150px;
+  padding-left: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
