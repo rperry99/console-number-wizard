@@ -7,21 +7,28 @@ let game = document.getElementById("game");
 let guessNumber = document.getElementById("guess");
 let titleText = document.getElementById("title");
 
+let minInput = document.getElementById("min");
+let maxInput = document.getElementById("max");
+
 //Variables
-let max = 1000;
-let min = 1;
-let guess = randomNumber();
-let guessCount = 0;
+let max;
+let min;
+let guess;
+let guessCount;
 
 /* Function */
 
 //Calculate the guess
-function calculate(min, max) {
-  return Math.floor((min + max) / 2);
+function calculate(lower, higher) {
+  return Math.floor((lower + higher) / 2);
 }
 //What happens when the guess is right
 function correct() {
   begin.style.display = "inline";
+  minInput.style.display = "block";
+  minInput.value = "";
+  maxInput.value = "";
+  maxInput.style.display = "block";
   game.style.display = "none";
   begin.innerHTML = "Play Again";
   winPhrase(guessCount);
@@ -29,12 +36,12 @@ function correct() {
 //What happens when the guess is too low
 function higher() {
   min = guess;
-  newGuess();
+  newGuess(min, max);
 }
 //What happens when the guess is too high
 function lower() {
   max = guess;
-  newGuess();
+  newGuess(min, max);
 }
 //Guess again
 function newGuess() {
@@ -43,15 +50,22 @@ function newGuess() {
   guessNumber.innerHTML = guess;
 }
 //Generate random number within the given range
-function randomNumber() {
-  return Math.floor(Math.random() * max) + min;
+function randomNumber(lower, higher) {
+  lower = Math.ceil(lower);
+  higher = Math.floor(higher);
+  return Math.floor(Math.random() * (higher - lower)) + lower;
 }
 //What happens when the play button is pressed
 function startGame() {
+  min = parseInt(minInput.value);
+  max = parseInt(maxInput.value);
+  guess = randomNumber(min, max);
   begin.style.display = "none";
+  minInput.style.display = "none";
+  maxInput.style.display = "none";
   game.style.display = "block";
   guessNumber.innerHTML = guess;
-  titleText.innerHTML = "Okay, Let's Play...";
+  titleText.innerHTML = `You chose a number between ${min} and ${max}`;
   max += 1;
   guessCount = 0;
 }
