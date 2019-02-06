@@ -10,8 +10,14 @@
   <body>
     <div class="container">
       <h1 id="title">
-        Choose a number between 1 and 1000 and I will guess it.
+        Choose two different Numbers. <br />
+        Then choose a number between the two. <br />
+        I will guess it.
       </h1>
+      <div id="choose">
+        <input type="number" id="min" placeholder="Lower Number" />
+        <input type="number" id="max" placeholder="Higher Number" />
+      </div>
       <button id="begin" onClick="startGame()">Begin</button>
       <div id="game">
         <p>The number you have chosen is...</p>
